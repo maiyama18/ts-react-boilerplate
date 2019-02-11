@@ -3,9 +3,16 @@ import { Container, Menu } from 'semantic-ui-react';
 
 export const Header = () => {
   return (
-    <Menu attached={true} inverted={true} borderless={true} size={'huge'} color={'orange'}>
+    <Menu
+      attached={true}
+      inverted={true}
+      borderless={true}
+      size={'huge'}
+      color={'orange'}
+      style={{ marginBottom: '1rem' }}
+    >
       <Container>
-        <Menu.Item>title</Menu.Item>
+        <Menu.Item fitted={'horizontally'}>title</Menu.Item>
       </Container>
     </Menu>
   );
