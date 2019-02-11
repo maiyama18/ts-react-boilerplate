@@ -4,7 +4,7 @@ import { Container } from 'semantic-ui-react';
 
 export const App = () => {
   return (
-    <div>
+    <div style={{ overflowY: 'scroll', overflowX: 'hidden' }}>
       <Header />
       <Container>
         hello
