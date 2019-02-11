@@ -1,6 +1,8 @@
 .vscode
 .idea
 
+.envrc
+
 dist
 node_modules
 .cache
