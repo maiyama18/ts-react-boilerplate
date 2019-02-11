@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { firebase } from '../firebase/init';
 import { AuthButton } from './AuthButton';
+import { TaskForm } from './TaskForm';
 const { useEffect, createContext, useState } = React;
 
 interface Auth {
@@ -34,6 +35,7 @@ export const App = () => {
   return (
     <AuthContext.Provider value={auth}>
       <AuthButton />
+      <TaskForm />
     </AuthContext.Provider>
   );
 };

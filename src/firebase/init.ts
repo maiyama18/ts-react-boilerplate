@@ -1,5 +1,6 @@
 import * as firebase from 'firebase/app';
 import 'firebase/auth';
+import 'firebase/firestore';
 
 const config = {
   apiKey: process.env.FIREBASE_API_KEY,
@@ -11,8 +12,9 @@ const config = {
 };
 firebase.initializeApp(config);
 
-const provider = new firebase.auth.GoogleAuthProvider();
+const firestore = firebase.firestore();
 
+const provider = new firebase.auth.GoogleAuthProvider();
 const loginWithGoogle = () => {
   firebase.auth().signInWithRedirect(provider);
 };
@@ -20,4 +22,4 @@ const logoutFromGoogle = () => {
   firebase.auth().signOut();
 };
 
-export { firebase, loginWithGoogle, logoutFromGoogle };
+export { firebase, firestore, loginWithGoogle, logoutFromGoogle };
